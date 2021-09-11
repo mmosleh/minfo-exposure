@@ -28,7 +28,7 @@ The functions relies on Rtweets library and needs to authenticate with your Twit
 
 library(misinfo.exposure)
 
-misinfo.scores <- misinfo.exposure::get_misinfo_exposure_score(c('user1','user2'))
+misinfo.scores <- misinfo.exposure::misinfo_exposure_score(c('user1','user2'))
 print(misinfo.scores)
 ```
 
