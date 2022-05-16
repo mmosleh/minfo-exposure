@@ -8,7 +8,7 @@
 data(falsity.scores)
 
 get_misinfo_exposure_score <- function(users){
-  friends <- rtweet::get_friends(users,verbose = TRUE)
+  friends <- rtweet::get_friends(users,verbose = TRUE, retryonratelimit = TRUE)
   friends_score <- merge(x=friends,y=falsity_score,by.x="user_id",by.y='elite_id_str',all.x=TRUE)
   r <- aggregate(friends_score$falsity,by=list(friends_score$user),FUN=mean,na.rm=TRUE,na.action=NULL)
   colnames(r) <- c('user','misinfo_score')
