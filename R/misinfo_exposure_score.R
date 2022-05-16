@@ -17,5 +17,3 @@ get_misinfo_exposure_score <- function(users){
   return(r)
 }
 
-
-get_misinfo_exposure_score(c('dg_rand'))

@@ -1,5 +1,5 @@
 # misinformation-exposure score: a score calculated based on public figures accounts followed on Twitter
-### Tested with R version 4.0.4
+
 
 ## About
 
