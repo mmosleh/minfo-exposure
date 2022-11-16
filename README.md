@@ -1,4 +1,43 @@
 # misinformation-exposure score: a score calculated based on public figures accounts followed on Twitter
+You can use the R package or the API service we have develope to calculate misinformation-exposure score at scale.
+## API service
+All you need is to create an account on https://rapidapi.com/ (it is free!)
+
+You can find the instruction to use the API here: https://rapidapi.com/mescalcapi-mescalcapi-default/api/mescalc
+It is very strightforward: 
+
+The input is either Twitter screen_name or Twitter ID and the output is misinifo exposure in [0,1], partisanship [-1,1] (-1 dem, 1 rep), and list of political elites the user followers.
+
+For example in R:
+``` r
+library(httr)
+
+screen_name<-'dg_rand'
+url <- paste("https://mescalc.p.rapidapi.com/account/",screen_name,sep='')
+
+response <- VERB("GET", url, add_headers('X-RapidAPI-Host' = 'mescalc.p.rapidapi.com', 'X-RapidAPI-Key' = 'SIGN-UP-FOR-KEY'), content_type("application/octet-stream"))
+
+content(response, "text")
+```
+
+And in Python:
+``` r
+import requests
+
+screen_name='dg_rand'
+url = "https://mescalc.p.rapidapi.com/account/{}".format(screen_name)
+
+headers = {
+	"X-RapidAPI-Host": "mescalc.p.rapidapi.com",
+	"X-RapidAPI-Key": "SIGN-UP-FOR-KEY"
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+```
+
+## R package
 ## R version 4.0.4
 
 ## About
