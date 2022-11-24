@@ -1,5 +1,15 @@
 # misinformation-exposure score: a score calculated based on public figures accounts followed on Twitter
 You can use the R package or the API service we have develope to calculate misinformation-exposure score at scale.
+
+## Citation
+If you use our method please cite the following:
+Mosleh, M., Rand, D.G. Measuring exposure to misinformation from political elites on Twitter. Nat Commun 13, 7144 (2022). https://doi.org/10.1038/s41467-022-34769-6
+
+## Website
+You can use the following webiste to check the misinformation exposure score for a give Twitter handle or user id.
+
+https://misinfo-expose.streamlit.app/
+
 ## API service
 All you need is to create an account on https://rapidapi.com/ (it is free!)
 
