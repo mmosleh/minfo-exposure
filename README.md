@@ -8,7 +8,7 @@ Mosleh, M., Rand, D.G. Measuring exposure to misinformation from political elite
 ## Website
 You can use the following webiste to check the misinformation exposure score for a give Twitter handle or user id.
 
-https://misinfo-expose.streamlit.app/
+https://misinfoexpose.com/
 
 ## API service
 All you need is to create an account on https://rapidapi.com/ (it is free!)
