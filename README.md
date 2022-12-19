@@ -22,7 +22,7 @@ For example in R:
 ``` r
 library(httr)
 
-screen_name<-'dg_rand'
+screen_name<-'aoc'
 url <- paste("https://mescalc.p.rapidapi.com/account/",tolower(screen_name),sep='')
 
 response <- VERB("GET", url, add_headers('X-RapidAPI-Host' = 'mescalc.p.rapidapi.com', 'X-RapidAPI-Key' = 'SIGN-UP-FOR-KEY'), content_type("application/octet-stream"))
@@ -34,7 +34,7 @@ And in Python:
 ``` r
 import requests
 
-screen_name='dg_rand'
+screen_name='aoc'
 url = "https://mescalc.p.rapidapi.com/account/{}".format(screen_name.lower())
 
 headers = {
